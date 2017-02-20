@@ -2,7 +2,7 @@ import React from 'react'
 import Head from 'next/head'
 import EmbeddedGist from '../src/EmbeddedGist.js'
 import Code from  '../components/Code'
-import Layout from '../components/layout'
+import Layout from '../components/Layout'
 
 const title = 'Animation Basics'
 const P1 = 'Put it on the Graphics Card.'
