@@ -6,46 +6,45 @@ export default class Logo extends Component {
 
     this.state = {
       title: 'Reactimation',
-      highlightStyle: {},
+      hoverStyle: {},
     }
   }
 
-  highlightOn = () => {
+  hoverOn = () => {
     this.setState({
-      highlight: {
-        color: 'rgba(50, 30, 120, 0.5)',
+      hoverStyle: {
+        color: 'rgba(10, 120, 180, 0.7)',
+        textShadow: '1px 0px 2px rgba(10, 120, 180, 0.5)',
       }
     })
-    console.log('beneficient')
   }
 
-  highlightOff = () => {
+  hoverOff = () => {
     this.setState({
-      highlight: {
+      hoverStyle: {
         color: 'rgba(0, 0, 0, 0.8)',
+        color: 'rgba(10, 120, 180, 0.7)',
       }
     })
-    console.log('malolevaloent')
   }
 
   render() {
-
     return (
-      <span
-        onMouseEnter={this.highlightOn}
-        onMouseOut={this.hightlightOff}
+      <div
+        onMouseEnter={this.hoverOn}
+        onMouseLeave={this.hoverOff}
       >
         <a
           href="/"
           style={styles.link}
         >
           <h2
-            style={styles.title, this.state.highlight}
+            style={{...styles.title, ...this.state.hoverStyle}}
           >
             {this.state.title}
           </h2>
         </a>
-      </span>
+      </div>
     )
   }
 }
@@ -55,8 +54,9 @@ const styles = {
     textDecoration: 'none',
   },
   title: {
+    fontSize: 28,
     fontWeight: 500,
     color: 'rgba(0, 0, 0, 0.8)',
-    border: '2px dashed orange',
+    color: 'rgba(8, 110, 160, 0.7)',
   }
 }

@@ -2,6 +2,7 @@ import React from 'react'
 import Link from 'next/link'
 import Head from 'next/head'
 import Logo from '../components/Logo'
+import Footer from '../components/Footer'
 
 export default ({ children, title = 'My Blogus funny blog!' }) => (
   <div style={styles.body}>
@@ -17,12 +18,10 @@ export default ({ children, title = 'My Blogus funny blog!' }) => (
       </header>
       <div style={styles.content}>
 
-          { children }
+        { children }
 
       </div>
-      <footer>
-        Clay Morton clay.morton@gmail.com @Lyonsclay github/Lyonsclay
-      </footer>
+      <Footer text="Clay Morton clay.morton@gmail.com @Lyonsclay github/Lyonsclay" />
     </div>
   </div>
 )
@@ -32,15 +31,17 @@ const styles = {
     display: 'flex',
     alignItems: 'center',
     flexDirection: 'column',
-    height: '100vh',
+    minHeight: '100vh',
     border: '2px solid orange',
   },
   main: {
+    display: 'flex',
+    flexDirection: 'column',
     minWidth: '50%',
     border: '2px solid pink',
-    height: '100vh',
+    minHeight: '100vh',
     fontFamily: 'Droid Serif',
-    /* fontFamily: 'Georgia,Cambria,"Times New Roman",Times,serif',*/
+    fontFamily: 'Georgia,Cambria,"Times New Roman",Times,serif',
   },
   header: {
     display: 'flex',
@@ -50,7 +51,7 @@ const styles = {
     display: 'flex',
     flex: 1,
     flexDirection: 'column',
-   alignItems: 'center',
+    alignItems: 'center',
   },
   link: {
     color: 'gray',
