@@ -1,6 +1,7 @@
 import React from 'react'
 import Link from 'next/link'
 import Head from 'next/head'
+import Logo from '../components/Logo'
 
 export default ({ children, title = 'My Blogus funny blog!' }) => (
   <div style={styles.body}>
@@ -12,8 +13,7 @@ export default ({ children, title = 'My Blogus funny blog!' }) => (
     </Head>
     <div style={styles.main}>
       <header style={styles.header}>
-        <h1 style={styles.logo}>Reactimation</h1>
-        <p style={styles.tag}>by @Lyonsclay</p>
+        <Logo />
       </header>
       <div style={styles.content}>
 
@@ -36,8 +36,6 @@ const styles = {
     border: '2px solid orange',
   },
   main: {
-    flexDirection: 'column',
-    maxWidth: 900,
     minWidth: '50%',
     border: '2px solid pink',
     height: '100vh',
@@ -53,16 +51,6 @@ const styles = {
     flex: 1,
     flexDirection: 'column',
    alignItems: 'center',
-  },
-  logo: {
-    fontWeight: 500,
-    color: 'rgba(0, 0, 0, 0.8)',
-  },
-  tag: {
-    paddingTop: 10,
-    paddingLeft: 10,
-    display: 'flex',
-    alignItems: 'center',
   },
   link: {
     color: 'gray',

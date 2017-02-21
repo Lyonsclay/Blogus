@@ -3,11 +3,12 @@ import Head from 'next/head'
 import EmbeddedGist from '../src/EmbeddedGist.js'
 import Code from  '../components/Code'
 import Layout from '../components/Layout'
+import BlogTitle from '../components/BlogTitle'
 
-const title = 'Animation Basics'
+const title = 'Animation and the Shadow Dom'
 const P1 = 'Put it on the Graphics Card.'
 const CodePen1 = () => (
-  <div>
+  <div style={styles.codePen}>
     <Head>
       <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
     </Head>
@@ -18,13 +19,14 @@ const P2 = 'Don\'t get too crazy or nothing. Just focus on declaring the result 
 const Gist1 = () => (
   <div>
     <EmbeddedGist gist="Lyonsclay/7bea4d320269a377eba25bc69a7e57b3" />
-    <style jsx> {`
-table {
-height: 100px;
-overflow: scroll;
-padding-top: 200px;
-}
-       `}
+    <style jsx>
+      {`
+        table {
+          height: 100px;
+          overflow: scroll;
+          padding-top: 200px;
+        }
+      `}
     </style>
   </div>
 )
@@ -56,17 +58,25 @@ const code1 = `
         </text>
       )
     }
+
 `
 const Code1 = () => (<code style={{whiteSpace: 'pre'}}>{code1}</code>)
 const P3 = 'That\'s coding; good stuff!'
 
 export default () => (
   <Layout>
-    <h3>{title}</h3>
+    <BlogTitle title={title}/>
     <p>{P1}</p>
-    <CodePen1/>
+    <CodePen1 />
     <p>{P2}</p>
     <Code code={code1} />
     <p>{P3}</p>
   </Layout>
 )
+
+const styles = {
+  codePen: {
+    width: '90%',
+    border: '2px dashed cyan',
+  }
+}
