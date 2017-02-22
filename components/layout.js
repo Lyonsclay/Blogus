@@ -10,8 +10,16 @@ export default ({ children, title = 'My Blogus funny blog!' }) => (
       <title>{ title }</title>
       <meta charSet='utf-8' />
       <meta name='viewport' content='initial-scale=1.0, width=device-width' />
-      <script href="https://fonts.googleapis.com/css?family=Droid+Serif" rel="stylesheet"/>
+      <link href="https://fonts.googleapis.com/css?family=Droid+Serif" rel="stylesheet"/>
+      <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet"/>
+      <link href="https://fonts.googleapis.com/css?family=Peddana" rel="stylesheet"/>
     </Head>
+    <style jsx>{`
+      @font-face {
+        font-family: 'Charis';
+          url('../src/CharisSIL-R.woff') format('woff'),
+      }
+    `}</style>
     <div style={styles.main}>
       <header style={styles.header}>
         <Logo />
@@ -32,7 +40,7 @@ const styles = {
     alignItems: 'center',
     flexDirection: 'column',
     minHeight: '100vh',
-    border: '2px solid orange',
+    /* border: '2px solid orange',*/
   },
   main: {
     display: 'flex',
