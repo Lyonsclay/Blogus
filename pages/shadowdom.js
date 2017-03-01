@@ -1,12 +1,26 @@
 import React from 'react'
 import Head from 'next/head'
-import EmbeddedGist from '../src/EmbeddedGist.js'
 import Code from  '../components/Code'
 import Layout from '../components/Layout'
 import BlogTitle from '../components/BlogTitle'
+import Paragaraph from '../components/Paragraph'
 
 const title = 'Animation and the Shadow Dom'
-const P1 = 'Put it on the Graphics Card.'
+/* const P1 = 'Put it on the Graphics Card.'*/
+const p1 = (
+  <div>
+  <p>
+  As a way of learning React I recently built a prototype of a browser game which got me thinking hard about animation on web.
+ </p>
+  <a href="https://medium.com/r/?url=http%3A%2F%2Fufogame.s3-website-us-west-2.amazonaws.com%2F">
+  UFO Game
+  </a>
+  <p>
+    I used the CSS properties `top` and `left` with `position: absolute;` to
+    position elements on the screen.
+  </p>
+  </div>
+)
 const CodePen1 = () => (
   <div style={styles.codePen}>
     <Head>
@@ -18,7 +32,6 @@ const CodePen1 = () => (
 const P2 = 'Don\'t get too crazy or nothing. Just focus on declaring the result of the animation rather than how to get there.'
 const Gist1 = () => (
   <div>
-    <EmbeddedGist gist="Lyonsclay/7bea4d320269a377eba25bc69a7e57b3" />
     <style jsx>
       {`
         table {
@@ -66,11 +79,17 @@ const P3 = 'That\'s coding; good stuff!'
 export default () => (
   <Layout>
     <BlogTitle title={title}/>
-    <p>{P1}</p>
+    <Paragaraph>
+      {p1}
+    </Paragaraph>
     <CodePen1 />
-    <p>{P2}</p>
+    <Paragaraph>
+      <p>{P2}</p>
+    </Paragaraph>
     <Code code={code1} />
-    <p>{P3}</p>
+    <Paragaraph>
+      <p>{P3}</p>
+    </Paragaraph>
   </Layout>
 )
 

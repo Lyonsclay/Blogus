@@ -5,16 +5,16 @@ import BlogTitle from '../components/BlogTitle'
 
 const styles = {
   p: {
-    maxWidth: 600,
+
   },
   iframe: {
-   width: '90%', 
+    width: '90%',
     alignItems: 'center',
   },
 }
 const p1 = (
   <p style={styles.p}>
-Why do users love motion so much? Mostly, because animation supports the essence of actual and real interaction, it creates the level of feelings and perception close to what people have when they are interacting with a physical object in real life. This sort of feeling can boost user experience rate of positiveness really high as the more natural user feels, the less effort is needed to deal with the app or a website and the more clear it is how it works. Certainly, it makes users satisfied. No secret, satisfaction and pleasure are among top things encouraging people to use the product again.
+    Movement is achieved by stating every position an object is moved to. This means that the program is responsible in some fashion for providing a list of positions and delivering them at a certain rate to achieve velocity or movement along a path. To get the speed I wanted I needed to add 20px every computational cycle which is dictated by the requestAnimationFrame() method, which isn’t all that smooth.
   </p>
 )
 const p9 = (
@@ -48,12 +48,12 @@ export default () => (
     <Paragraph>
       {p1}
     </Paragraph>
-     <Paragraph>
+    <Paragraph>
       {p2}
     </Paragraph>
-     <Paragraph>
+    <Paragraph>
       {p9}
     </Paragraph>
-   {wormholes}
+    {wormholes}
   </Layout>
 )

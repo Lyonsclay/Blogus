@@ -12,18 +12,26 @@ const styles = {
     alignItems: 'center',
     flexDirection: 'column',
     justifyContent: 'space-between',
-    maxWidth: '60%',
+    maxWidth: 680,
+    minWidth: '60%',
     /* border: '2px solid lime',*/
     /* fontFamily: 'Georgia,Cambria,"Times New Roman",Times,serif',*/
     /* fontFamily: 'Peddana',*/
-    fontFamily: 'Charis',
-    fontSize: 15,
-    /* fontSizeAdjust: 0.5,*/
-    letterSpacing: '-.003em',
-    wordSpacing: 1,
-    lineHeight: 1.58,
-    width: '90%',
-    fontWeight: 200,
-    color: 'rgba(0, 0, 0, 0.7)',
+    /* fontFamily: 'ff-meta-serif-web-pro',*/
+    fontFamily: 'expo-serif-pro',
+    fontFamily: 'leitura news',
+    fontFamily: 'freight-text-pro',
+    fontFamily: 'Merriweather',
+    fontFamily: 'Lustria',
+    fontFamily: 'Lora',
+    /* fontFamily: 'Quattrocento',*/
+    fontSize: 22,
+    fontSize: 19,
+    fontWeight: 300,
+    /* letterSpacing: '-.003em',*/
+    letterSpacing: '.005em',
+    /* wordSpacing: 1,*/
+    lineHeight: 1.70,
+    color: 'rgba(30, 30, 30, 0.8)',
   }
 }

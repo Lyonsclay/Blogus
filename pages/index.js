@@ -7,8 +7,9 @@ export default () => (
     <div style={styles.sidebar}>
       <nav style={styles.menu}>
         <Link href='/'><a>Home</a></Link>
-        <Link href='/shadowdom'><a>The Shadow Dom</a></Link>
+        <Link href='/shadowdom'><a>The Shallow Dom</a></Link>
         <Link href='/wormholes'><a>Worm Holes</a></Link>
+        <Link href='/bloggy'><a>A Blog for Coders</a></Link>
       </nav>
     </div>
   </Layout>
