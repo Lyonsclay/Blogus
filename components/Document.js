@@ -8,26 +8,33 @@ export default class Document extends Component {
     this.state = {
       paragraphs: [],
       index: -1,
-    },
+    }
 
-    this.newParagraph = () => {
+  }
+
+    newParagraph = () => {
       const { paragraphs, index } = this.state
 
 
       this.setState({
         paragraphs: [
           ...paragraphs.slice(0, index),
-          <EditParagraph />,
+          <EditParagraph key={index} paragraph={'paragraph' + (index + 1)}/>,
           ...paragraphs.slice(index)
         ],
-        index: ++index
+        index: index + 1
       })
+
+      /* this.refs['paragraph' + index].focus()*/
+
+
+      console.log('Happiness')
     }
-  }
 
   render() {
     return (
-      <div style={styles.main}>
+      <div style={styles.main} onClick={this.newParagraph}>
+        
         {this.state.paragraphs}
       </div>
     )
@@ -37,5 +44,8 @@ export default class Document extends Component {
 const styles = {
   main: {
     display: 'flex',
+    backgroundColor: 'yellow',
+    width: 200,
+    height: 200,
   },
 }

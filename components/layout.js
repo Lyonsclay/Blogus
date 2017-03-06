@@ -30,6 +30,7 @@ export default class Layout extends Component {
         <div style={styles.main}>
           <header style={styles.header}>
             <Logo />
+            <Link href='/newblog'><a>New Blog</a></Link>
           </header>
           <div style={styles.content}>
 

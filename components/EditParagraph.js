@@ -9,10 +9,18 @@ export default class EditParagraph extends Component {
     this.onChange = (editorState) => this.setState({editorState})
   }
 
+  componentDidMount() {
+    this.refs[this.props.paragraph].focus()
+  }
+
   render() {
     return (
       <div style={styles.main}>
-        <Editor editorState={this.state.editorState} onChange={this.onChange} />
+        <Editor
+          editorState={this.state.editorState}
+          onChange={this.onChange}
+          ref={this.props.paragraph}
+        />
       </div>
     )
   }
@@ -21,6 +29,7 @@ export default class EditParagraph extends Component {
 const styles = {
   main: {
     display: 'flex',
+    backgroundColor: 'turquoise',
   },
 }
 
