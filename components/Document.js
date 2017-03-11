@@ -9,32 +9,35 @@ export default class Document extends Component {
       paragraphs: [],
       index: -1,
     }
-
   }
 
-    newParagraph = () => {
-      const { paragraphs, index } = this.state
-
-
-      this.setState({
-        paragraphs: [
-          ...paragraphs.slice(0, index),
-          <EditParagraph key={index} paragraph={'paragraph' + (index + 1)}/>,
-          ...paragraphs.slice(index)
-        ],
-        index: index + 1
-      })
-
-      /* this.refs['paragraph' + index].focus()*/
-
-
-      console.log('Happiness')
+  _keyPress = (e) => {
+    if (e.key === 'Enter') {
+      this.newParagraph()
     }
+  }
+
+  newParagraph = () => {
+    const { paragraphs, index } = this.state
+
+    this.setState({
+      paragraphs: [
+        ...paragraphs.slice(0, index),
+        <EditParagraph key={index} paragraph={'paragraph' + (index + 1)}/>,
+        ...paragraphs.slice(index)
+      ],
+      index: index + 1
+    })
+  }
 
   render() {
     return (
-      <div style={styles.main} onClick={this.newParagraph}>
-        
+      <div
+        style={styles.main}
+        onClick={this.newParagraph}
+        onKeyDown={this._keyPress}
+      >
+
         {this.state.paragraphs}
       </div>
     )
@@ -44,8 +47,10 @@ export default class Document extends Component {
 const styles = {
   main: {
     display: 'flex',
-    backgroundColor: 'yellow',
-    width: 200,
-    height: 200,
+    flexDirection: 'column',
+    minHeight: '100vh',
+    width: '32vw',
+    backgroundColor: 'gray',
+    backgroundColor: 'white',
   },
 }

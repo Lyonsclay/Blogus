@@ -4,8 +4,11 @@ import {Editor, EditorState } from 'draft-js'
 export default class EditParagraph extends Component {
   constructor(props) {
     super(props)
+    this.state = {
+      editorState: EditorState.createEmpty(),
+      editor: false,
+    }
 
-    this.state = { editorState: EditorState.createEmpty() }
     this.onChange = (editorState) => this.setState({editorState})
   }
 
@@ -13,10 +16,14 @@ export default class EditParagraph extends Component {
     this.refs[this.props.paragraph].focus()
   }
 
+
   render() {
     return (
-      <div style={styles.main}>
+      <div
+        style={styles.main}
+      >
         <Editor
+          style={styles.editor}
           editorState={this.state.editorState}
           onChange={this.onChange}
           ref={this.props.paragraph}
@@ -29,7 +36,12 @@ export default class EditParagraph extends Component {
 const styles = {
   main: {
     display: 'flex',
-    backgroundColor: 'turquoise',
+    flexBasis: 'auto',
+    border: '2px solid gray',
+    marginTop: '1em',
   },
+  editor: {
+    flex: '1 1 1em',
+  }
 }
 
