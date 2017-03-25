@@ -1,7 +1,7 @@
 import React from 'react'
 import Layout from '../components/Layout'
 import Paragraph from '../components/Paragraph'
-import BlogTitle from '../components/BlogTitle'
+import StaticTitle from '../components/StaticTitle'
 import Code from '../components/Code'
 import codeSnippet from './codeSnippet'
 
@@ -30,7 +30,7 @@ const p3 = (
 
 export default () => (
   <Layout>
-    <BlogTitle title="Building a Coders Blog" />
+    <StaticTitle title="Building a Coders Blog" />
     <Paragraph>
       I love Medium as a blogging engine. I'ts minimalist style is exquisite and effective.
       Additionaly you get great discoverablility and SEO. However when writing a coding blog

@@ -1,7 +1,7 @@
 import React from 'react'
 import Layout from '../components/Layout'
 import Paragraph from '../components/Paragraph'
-import BlogTitle from '../components/BlogTitle'
+import StaticTitle from '../components/StaticTitle'
 
 const styles = {
   p: {
@@ -44,7 +44,7 @@ const wormholes = (
 
 export default () => (
   <Layout>
-    <BlogTitle title="Worm Holes, an Animated Journey." />
+    <StaticTitle title="Worm Holes, an Animated Journey." />
     <Paragraph>
       {p1}
     </Paragraph>

@@ -17,6 +17,8 @@ export default class Layout extends Component {
           <meta charSet='utf-8' />
           <meta name='viewport' content='initial-scale=1.0, width=device-width' />
           <script src="https://use.typekit.net/wwg1wtb.js"></script>
+          <link href="/static/block.css" rel="stylesheet"/>
+          <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet"/>
           <link href="https://fonts.googleapis.com/css?family=Quattrocento" rel="stylesheet"/>
           <link href="https://fonts.googleapis.com/css?family=Lora" rel="stylesheet"/>
           <link href="https://fonts.googleapis.com/css?family=Lustria" rel="stylesheet"/>

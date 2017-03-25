@@ -1,12 +1,11 @@
 {
   "dependencies": {
     "draft-js": "^0.10.0",
-    "highlight.js": "^9.9.0",
+    "draft-js-plugins-editor": "^2.0.0-beta1",
     "jest": "^19.0.2",
-    "next": "^2.0.0-beta.32",
+    "next": "^2.0.0-beta.39",
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
-    "react-syntax-highlighter": "^5.0.0",
     "react-test-renderer": "^15.4.2"
   },
   "scripts": {

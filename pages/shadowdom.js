@@ -2,7 +2,7 @@ import React from 'react'
 import Head from 'next/head'
 import Code from  '../components/Code'
 import Layout from '../components/Layout'
-import BlogTitle from '../components/BlogTitle'
+import StaticTitle from '../components/StaticTitle'
 import Paragaraph from '../components/Paragraph'
 
 const title = 'Animation and the Shadow Dom'
@@ -78,7 +78,7 @@ const P3 = 'That\'s coding; good stuff!'
 
 export default () => (
   <Layout>
-    <BlogTitle title={title}/>
+    <StaticTitle title={title}/>
     <Paragaraph>
       {p1}
     </Paragaraph>

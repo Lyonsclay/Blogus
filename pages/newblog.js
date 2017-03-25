@@ -8,8 +8,21 @@ const title = 'My New Blog'
 export default () => (
   <div>
     <Layout>
-      <Title title={title} />
-      <Document />
+      <div style={styles.title}>
+        <Title style={styles.title} />
+      </div>
+      <div style={styles.document}>
+        <Document />
+      </div>
     </Layout>
   </div>
 )
+
+const styles = {
+  title: {
+    marginTop: 40,
+  },
+  document: {
+    marginTop: 40,
+  }
+}
