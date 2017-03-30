@@ -56,3 +56,5 @@ const styles = {
     /* cursor: 'text',*/
   },
 }
+
+//Freight Text Pro Book is a great font from myfonts.com for $45.

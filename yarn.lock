@@ -1414,6 +1414,12 @@ draft-js-plugins-editor@^2.0.0-beta1:
     react-dom ">=15.1.0"
     union-class-names "^1.0.0"
 
+draft-js-single-line-plugin@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/draft-js-single-line-plugin/-/draft-js-single-line-plugin-2.0.0.tgz#25f71ead8ae3ff4398ee93d014c1494de28f06fc"
+  dependencies:
+    immutable "^3.8.1"
+
 draft-js@>=0.7.0, draft-js@^0.10.0:
   version "0.10.0"
   resolved "https://registry.yarnpkg.com/draft-js/-/draft-js-0.10.0.tgz#29d16191012b932fdab28a9b37ec1538f421abf6"
@@ -1984,7 +1990,7 @@ ieee754@^1.1.4:
   version "1.1.8"
   resolved "https://registry.yarnpkg.com/ieee754/-/ieee754-1.1.8.tgz#be33d40ac10ef1926701f6f08a2d86fbfd1ad3e4"
 
-immutable@>=3.8.1:
+immutable@>=3.8.1, immutable@^3.8.1:
   version "3.8.1"
   resolved "https://registry.yarnpkg.com/immutable/-/immutable-3.8.1.tgz#200807f11ab0f72710ea485542de088075f68cd2"
 

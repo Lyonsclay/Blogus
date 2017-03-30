@@ -1,7 +1,8 @@
 import React from 'react'
 import Layout from '../components/Layout'
 import Document from '../components/Document'
-import Title from '../components/BlogTitle'
+/* import Title from '../components/BlogTitle'*/
+import Title from '../components/BloggyTitle'
 
 const title = 'My New Blog'
 
