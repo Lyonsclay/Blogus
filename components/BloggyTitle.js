@@ -1,21 +1,37 @@
 import React, { Component } from 'react'
-import createSingleLinePlugin from 'draft-js-single-line-plugin'
-import Editor, { createEditorStateWithText } from 'draft-js-plugins-editor'
-import { EditorState } from 'draft-js'
-
-const singleLinePlugin = createSingleLinePlugin()
-const plugins = [createSingleLinePlugin]
+import {
+  Editor,
+  EditorState,
+  convertToRaw,
+  convertFromRaw
+} from 'draft-js'
 
 export default class Title extends Component {
   constructor(props) {
     super(props)
-
-    this.state = { editorState: EditorState.createEmpty() }
+    const contentState = {
+      entityMap: {},
+      blocks: [{
+        key: '18ql9',
+        text: 'My Newest Blog',
+        type: 'unstyled',
+        depth: 0,
+        inlineStyleRanges: [],
+        entityRanges: [],
+      }],
+    }
+    this.state = {
+      editorState: EditorState.createWithContent(convertFromRaw(contentState))
+    }
+    /* this.state = { editorState: EditorState.createEmpty() }*/
     this.onChange = (editorState) => this.setState({editorState})
-    this.focus = () => this.refs.title.focus()
-    this.handleSubmit = () => this.handleSubmit().bind(this)
+    this.handleSubmit = this.handleSubmit.bind(this)
+    this.edit = this.edit.bind(this)
   }
 
+  edit() {
+    this.refs.title.focus()
+  }
 
   handleChange(event) {
     this.setState({
@@ -25,23 +41,26 @@ export default class Title extends Component {
   }
 
   handleSubmit(event) {
-        event.nextSibling.focus()
+    /* event.preventDefault()*/
+    console.log(JSON.stringify(convertToRaw(this.state.editorState.getCurrentContent())))
+    /* this.refs.document.focus()*/
   }
 
   render() {
     return (
-      <div onClick={this.focus}>
+      <div
+        onClick={this.edit}
+        style={styles.title}
+      >
         <Editor
-          plugins={plugins}
-          blockRenderMap={singleLinePlugin.blockRenderMap}
-          style={styles.title}
           editorState={this.state.editorState}
           onChange={this.onChange}
           handleReturn={this.handleSubmit}
-          placeholder="My Newest Blog"
-          ref={'title'}
+          ref="title"
         />
-      </div>)}
+      </div>
+    )
+  }
 }
 
 const styles = {
@@ -52,5 +71,6 @@ const styles = {
     fontSize: '20pt',
     fontFamily: 'helvetica',
     outline: 'none',
+    color: 'gray',
   },
 }

@@ -10,7 +10,7 @@ export default () => (
   <div>
     <Layout>
       <div style={styles.title}>
-        <Title style={styles.title} />
+        <Title />
       </div>
       <div style={styles.document}>
         <Document />

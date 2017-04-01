@@ -15,12 +15,17 @@ export default class Document extends Component {
   }
 
   componentDidMount() {
+
+  }
+
+  focus() {
     this.refs.document.focus()
   }
 
   render() {
     return (
       <div
+        onClick={this.focus}
         style={styles.main}
       >
         <Editor
